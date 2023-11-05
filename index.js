@@ -29,7 +29,7 @@ async function pinCIDsSequentially() {
   for (let index = 0; index < cids.length; index++) {
     const cid = cids[index];
     try {
-      await pinata.unpin(cid);
+      await pinata.pinByHash(cid);
     } catch (err) {
       errors.push(cid);
     }
